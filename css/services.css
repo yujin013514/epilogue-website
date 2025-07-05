@@ -1,0 +1,451 @@
+/* ==========================================================================
+   Services Page Specific Styles - services.css
+   ========================================================================== */
+
+/* 전체 컨테이너 */
+.services-container {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #000000;
+    min-height: 100vh;
+}
+
+/* 히어로 섹션 */
+.hero-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 0 150px;
+    text-align: left;
+}
+
+.main-title-line1,
+.main-title-line2 {
+    font-family: 'Pretendard Variable';
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 84px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    margin: 0 0 10px 0;
+}
+
+.highlight-text {
+    color: #DB4827;
+}
+
+.hero-description {
+    font-family: 'Pretendard Variable';
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 48px;
+    color: #FFFFFF;
+    margin: 40px 0 60px 0;
+    max-width: 1187px;
+}
+
+/* CTA 섹션 */
+.cta-section {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    margin-top: 60px;
+}
+
+.cta-button {
+    width: 375px;
+    height: 77px;
+    background: #DB4827;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Pretendard Variable';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-button:hover {
+    background: #c43e21;
+    transform: translateY(-2px);
+}
+
+.email-form {
+    display: flex;
+    position: relative;
+}
+
+.email-input {
+    width: 650px;
+    height: 77px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0 150px 0 20px;
+    font-family: 'Pretendard Variable';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.05em;
+    color: #333;
+}
+
+.email-input::placeholder {
+    color: #DFDFDF;
+}
+
+.email-submit-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 139px;
+    height: 77px;
+    background: #DB4827;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    font-family: 'Pretendard Variable';
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.email-submit-btn:hover {
+    background: #c43e21;
+}
+
+/* 서비스 섹션 공통 */
+.service-section {
+    position: relative;
+    margin: 200px 0;
+}
+
+/* 섹션 헤더 (번호 + 라인) */
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: -50px; /* 음수값으로 오버랩 */
+    position: relative;
+    z-index: 5; /* 이미지 위에 표시 */
+}
+
+.section-number {
+    font-family: 'Pretendard Variable';
+    font-weight: 600;
+    font-size: 200px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.section-line {
+    flex: 1;
+    height: 3px;
+    background: #FFFFFF;
+}
+
+/* 서비스 이미지 */
+.service-image {
+    position: relative;
+    width: 100vw;
+    height: 700px;
+    margin-left: calc(-50vw + 50%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 80px;
+    overflow: hidden;
+    z-index: 1; /* 섹션 헤더보다 낮은 z-index */
+}
+
+.service-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.service-image-title {
+    position: relative;
+    z-index: 10;
+    font-family: 'Pretendard Variable';
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 72px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.onsite-image {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('../images/services/imageOnsitetest.png');
+}
+
+.experience-image {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('../images/services/imageTesting.png');
+}
+
+/* 서비스 콘텐츠 */
+.service-content {
+    text-align: center;
+    margin-bottom: 100px; /* 섹션 간 간격 통일 */
+}
+
+.service-title {
+    font-family: 'Pretendard Variable';
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 84px;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    margin: 0 0 60px 0;
+}
+
+.service-tags {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    width: 309px;
+    height: 72px;
+    border: 1px solid #FFFFFF;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Pretendard Variable';
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 32px;
+    letter-spacing: -0.05em;
+    color: #D9D9D9;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+}
+
+.service-description {
+    font-family: 'Pretendard Variable';
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    margin: 0;
+    max-width: 1074px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.onsite-desc {
+    font-weight: 400;
+}
+
+/* 타겟 섹션 */
+.target-section {
+    margin: 200px 0;
+    text-align: center;
+}
+
+.target-title {
+    font-family: 'Pretendard Variable';
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 72px;
+    color: #FFFFFF;
+    margin: 0 0 40px 0;
+}
+
+.target-subtitle {
+    font-family: 'Pretendard Variable';
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    color: #FFFFFF;
+    margin: 0 0 100px 0;
+}
+
+/* 프로필 슬라이더 */
+.profile-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.profile-cards {
+    display: flex;
+    gap: 0; /* 간격 제거 */
+    transition: transform 0.5s ease;
+    width: calc(280px * 10); /* 카드 개수 * 2배로 무한 루프 효과 */
+}
+
+.profile-card {
+    min-width: calc(100vw / 5); /* 화면을 5등분하여 5개 카드가 꽉 차게 */
+    height: 300px;
+    background: rgba(217, 217, 217, 0.2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+}
+
+.profile-image {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+/* 프로필 이미지 배경 */
+.profile-1 { 
+    background-image: url('../images/services/profile1.png'); 
+}
+.profile-2 { 
+    background-image: url('../images/services/profile2.png'); 
+}
+.profile-3 { 
+    background-image: url('../images/services/profile3.png'); 
+}
+.profile-4 { 
+    background-image: url('../images/services/profile4.png'); 
+}
+.profile-5 { 
+    background-image: url('../images/services/profile5.png'); 
+}
+
+.profile-text {
+    font-family: 'Pretendard Variable';
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0 20px;
+}
+
+/* 슬라이더 컨트롤 */
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.slider-btn {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-btn:hover {
+    background: #FFFFFF;
+    color: #000000;
+}
+
+/* CTA 배너 */
+.cta-banner {
+    width: 100vw;
+    height: 589px;
+    margin-left: calc(-50vw + 50%);
+    background: linear-gradient(93.12deg, #DB4827 2.92%, #DB4827 10.8%, #EDA493 84.57%, #FFFFFF 99.43%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.cta-banner h2 {
+    font-family: 'Pretendard Variable';
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 72px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    margin: 0 0 60px 0;
+    max-width: 1253px;
+}
+
+.demo-button {
+    width: 396px;
+    height: 77px;
+    background: #DB4827;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Pretendard Variable';
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.demo-button:hover {
+    background: #c43e21;
+    transform: translateY(-2px);
+}
+
+/* 이메일 폼 제출 처리 */
+.email-form.submitted .email-input {
+    background: #e8f5e8;
+    border: 2px solid #4caf50;
+}
+
+.email-form.error .email-input {
+    background: #ffe8e8;
+    border: 2px solid #f44336;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도입 문의하기 - Epilogue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 헤더 플레이스홀더 -->
+        <div id="header-placeholder"></div>
+
+        <!-- 메인 컨텐츠 -->
+        <div class="main-container">
+            <!-- 왼쪽 텍스트 영역 -->
+            <div class="left-content">
+                <h1 class="main-title">도입 전,<br>현지 전문가와<br>먼저 만나보세요</h1>
+                <p class="main-description">에필로그 팀이 제품과 시장 상황을<br>바탕으로 맞춤형 PMF 테스트 플랜을<br>안내드립니다</p>
+            </div>
+
+            <!-- 오른쪽 컨택트 폼 -->
+            <div class="contact-form-container">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/movwzdgn" method="POST">                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">성함</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">회사명</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="email">회사 이메일</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="agree" name="agree" required>
+                        <label for="agree">진행함으로써, 저는 에필로그의 이용약관에 동의하며 개인정보처리방침을 읽고 이해했음을 확인합니다.</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">도입 문의하기</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- 푸터 플레이스홀더 -->
+        <div id="footer-placeholder"></div>
+    </div>
+
+    <!-- 공통 스크립트 -->
+    <script src="js/common.js"></script>
+    <script>
+        // Contact 폼 처리
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // 폼 데이터 수집
+                    const formData = new FormData(this);
+                    const data = {
+                        name: formData.get('name'),
+                        company: formData.get('company'),
+                        email: formData.get('email'),
+                        agree: formData.get('agree')
+                    };
+                    
+                    // 간단한 검증
+                    if (!data.name || !data.company || !data.email || !data.agree) {
+                        alert('모든 필드를 입력해주세요.');
+                        return;
+                    }
+                    
+                    if (!isValidEmail(data.email)) {
+                        alert('올바른 이메일 주소를 입력해주세요.');
+                        return;
+                    }
+                    
+                    // 제출 버튼 상태 변경
+                    const submitBtn = this.querySelector('.submit-btn');
+                    submitBtn.disabled = true;
+                    submitBtn.classList.add('loading');
+                    submitBtn.textContent = '제출 중';
+                    
+                    // 실제로는 서버로 데이터 전송
+                    // 여기서는 콘솔에 로그만 출력
+                    console.log('폼 데이터:', data);
+                    
+                    // 시뮬레이션: 2초 후 성공 메시지
+                    setTimeout(() => {
+                        alert(`${data.name}님, 문의가 성공적으로 접수되었습니다!\n빠른 시일 내에 ${data.email}로 연락드리겠습니다.`);
+                        
+                        // 폼 리셋
+                        this.reset();
+                        
+                        // 버튼 상태 복원
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('loading');
+                        submitBtn.textContent = '도입 문의하기';
+                    }, 2000);
+                });
+            }
+            
+            // 이메일 검증 함수
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            // 실시간 입력 검증
+            const inputs = document.querySelectorAll('.form-group input');
+            inputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    if (this.value.trim() === '') {
+                        this.classList.add('error');
+                        this.classList.remove('success');
+                    } else if (this.type === 'email' && !isValidEmail(this.value)) {
+                        this.classList.add('error');
+                        this.classList.remove('success');
+                    } else {
+                        this.classList.remove('error');
+                        this.classList.add('success');
+                    }
+                });
+                
+                input.addEventListener('input', function() {
+                    this.classList.remove('error', 'success');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

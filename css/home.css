@@ -1,0 +1,368 @@
+/* ==========================================================================
+   Home Page Specific Styles - home.css
+   Styles used only for the main page (index.html)
+   ========================================================================== */
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 0;
+    position: relative;
+    height: 800px;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+/* Main slogan at the top */
+.slogan {
+    position: absolute;
+    width: 100%;
+    height: 62px;
+    left: 0px;
+    top: 212px;
+    font-family: 'Pretendard Variable';
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* First line: Find your PMF */
+.first-line {
+    position: absolute;
+    width: 1440px;
+    height: 84px;
+    left: 0px;
+    top: 283px;
+    font-family: 'Pretendard Variable';
+    font-weight: 800;
+    font-size: 110px;
+    line-height: 131px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Second line container */
+.second-line {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    top: 410px;
+}
+
+/* "but" text */
+.but {
+    position: absolute;
+    width: 1440px;
+    height: 84px;
+    left: -177px;
+    top: 0px;
+    font-family: 'Pretendard Variable';
+    font-weight: 800;
+    font-size: 110px;
+    line-height: 131px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* "Faster" text */
+.faster {
+    position: absolute;
+    width: 520px;
+    height: 240px;
+    left: 585px;
+    top: -57px;
+    font-family: 'Comforter';
+    font-weight: 400;
+    font-size: 200px;
+    line-height: 282px;
+    text-align: center;
+    color: #DB4827;
+    margin: 0;
+}
+
+/* PMF 애스터리스크 */
+.pmf-asterisk {
+    color: #DB4827;
+}
+
+/* PMF 정의 */
+.pmf-definition {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    left: 200px;
+    top: 570px;
+    font-family: 'Pretendard Variable';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Demo button */
+.demo-btn {
+    position: absolute;
+    width: 330px;
+    height: 77px;
+    left: 555px;
+    top: 650px;
+    background-color: #DB4827;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-btn:hover {
+    background: #c43e21;
+    transform: translateY(-2px);
+}
+
+/* Introduction section */
+.intro {
+    text-align: center;
+    padding: 40px;
+    margin-top: 100px;
+}
+
+.intro h2 {
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 95px;
+    letter-spacing: -0.03em;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 auto;
+    width: 100%;
+}
+
+.intro p {
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 45px;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Report section */
+.report {
+    text-align: center;
+    padding: 40px;
+    margin-top: 200px;
+}
+
+.report-image {
+    width: 1181px;
+    height: 634px;
+    margin: 0 auto;
+}
+
+.report-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 10px rgba(139, 139, 139, 0.2));
+}
+
+/* Top text section before connecting */
+.pre-connecting {
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 200px;
+    font-family: 'Pretendard Variable';
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -0.03em;
+}
+
+.pre-connecting .highlight {
+    color: #DB4827;
+    font-weight: 700;
+}
+
+/* Background image sections */
+.connecting, .data, .global {
+    position: relative;
+    height: 600px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+/* Background images for each section */
+.connecting {
+    background-image: url('../images/home/imageNetwork.png');
+}
+
+.data {
+    background-image: url('../images/home/imageData.png');
+}
+
+.global {
+    background-image: url('../images/home/imageGlobalmarket.png');
+}
+
+/* Dark overlay */
+.connecting::before, .data::before, .global::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Content container */
+.content-overlay {
+    position: relative;
+    z-index: 10;
+    text-align: left;
+    padding: 60px;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* Connecting section - vertical layout */
+.connecting .content-overlay {
+    justify-content: space-between;
+}
+
+/* Data and global sections - consistent button position */
+.data .content-overlay,
+.global .content-overlay {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* Top content group */
+.top-content {
+    margin-bottom: auto;
+}
+
+/* Bottom content group - based on connecting layout */
+.bottom-content {
+    margin-top: auto;
+    text-align: center;
+}
+
+/* Header group for data-driven and global sections */
+.header-group {
+    margin-bottom: 60px;
+}
+
+/* Button area - consistent position with connecting section */
+.button-area {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+/* Section button styles */
+.section-btn {
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 60px;
+    padding: 15px 40px;
+    font-family: 'Pretendard Variable';
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 40px;
+    text-decoration: none;
+}
+
+.section-btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* CTA 배너 - 다른 페이지와 동일한 스타일 */
+.cta-banner {
+    width: 100vw;
+    height: 589px;
+    margin-left: calc(-50vw + 50%);
+    background: linear-gradient(93.12deg, #DB4827 2.92%, #DB4827 10.8%, #EDA493 84.57%, #FFFFFF 99.43%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.cta-banner-title {
+    font-family: 'Pretendard Variable';
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 72px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    margin: 0 0 60px 0;
+    max-width: 1253px;
+}
+
+.cta-banner-button {
+    width: 396px;
+    height: 77px;
+    background: #DB4827;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Pretendard Variable';
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-banner-button:hover {
+    background: #c43e21;
+    transform: translateY(-2px);
+}

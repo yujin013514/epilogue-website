@@ -1,0 +1,399 @@
+/* ==========================================================================
+    common.css
+   ========================================================================== */
+
+   body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Pretendard Variable', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* 헤더 스타일 - 컴포넌트 대응 */
+.header,
+header {
+    height: 110px;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo,
+.logo a {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav,
+nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav-item,
+nav a {
+    font-weight: 600;
+    font-size: 22px;  /* 26px → 22px로 줄임 */
+    line-height: 28px;  /* line-height도 비례적으로 줄임 */
+    letter-spacing: -0.05em;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-left: 0;
+    display: inline-block;
+}
+
+.nav-item:hover,
+nav a:hover {
+    color: #DB4827;
+}
+
+.nav-item.active,
+nav a.active {
+    color: #DB4827;
+}
+
+/* 메인 콘텐츠 */
+.main-content {
+    /* 기존 스타일 유지 */
+}
+
+/* 공통 버튼 스타일 */
+.btn-primary {
+    background-color: #DB4827;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Pretendard Variable';
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary:hover {
+    background-color: #c63d20;
+    transform: translateY(-2px);
+}
+
+.btn-outline,
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 60px;
+    padding: 15px 40px;
+    font-family: 'Pretendard Variable';
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 32px;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline:hover,
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Input 스타일 */
+.input-primary {
+    background: #FFFFFF;
+    border: none;
+    border-radius: 15px;
+    padding: 0 20px;
+    font-size: 34px;
+    color: #333;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.input-primary::placeholder {
+    color: #DFDFDF;
+}
+
+/* 섹션 공통 스타일 */
+.section {
+    text-align: center;
+    padding: 40px;
+    margin-top: 200px;
+}
+
+.section-title {
+    font-family: 'Pretendard Variable';
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 84px;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: left !important;
+}
+
+.section-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 61px;
+    letter-spacing: -0.05em;
+    color: #DB4827;
+    margin-bottom: 20px;
+    text-align: left !important;
+}
+
+.section-description {
+    font-family: 'Pretendard Variable';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+    margin-bottom: 0;
+    max-width: 900px;
+    text-align: left !important;
+}
+
+/* 푸터 스타일 */
+.footer,
+footer {
+    position: relative;
+    background: #000000;
+    padding: 100px 0;
+    margin-top: 200px;
+    overflow: hidden;
+}
+
+/* epilogue 배경 텍스트 */
+.footer-background-text {
+    position: absolute;
+    width: 100vw;
+    height: 537px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    font-family: 'Pretendard Variable';
+    font-weight: 700;
+    font-size: 450px;
+    line-height: 537px;
+    letter-spacing: -0.05em;
+    color: rgba(255, 255, 255, 0.05);
+    z-index: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* 구분선 */
+.footer-line {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background: #FFFFFF;
+    margin: 0 0 50px 0; /* 상단 마진 제거, 하단만 50px */
+    z-index: 2;
+    margin-left: 149px; /* 다른 요소들과 동일한 위치 */
+    width: calc(100% - 149px); /* 좌측 마진만큼 너비 조정 */
+}
+
+/* 연락처 정보 컨테이너 */
+.contact-info {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 50px;
+}
+
+.contact-title {
+    font-family: 'Pretendard Variable';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-name {
+    font-family: 'Pretendard Variable';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.contact-role {
+    font-family: 'Pretendard Variable';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #CCCCCC;
+}
+
+.contact-email {
+    font-family: 'Pretendard Variable';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #CCCCCC;
+}
+
+.contact-phone {
+    font-family: 'Pretendard Variable';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #CCCCCC;
+}
+
+/* 저작권 정보 */
+.copyright {
+    position: relative;
+    z-index: 2;
+    font-family: 'Pretendard Variable';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #CCCCCC;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* 회사 정보 (기존 유지) */
+.company-info {
+    position: relative;
+    z-index: 1;
+    margin-left: 149px;
+    margin-top: 95px;
+}
+
+.company-name {
+    font-family: 'Pretendard Variable';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    margin-bottom: 27px;
+}
+
+.company-details {
+    font-family: 'Pretendard Variable';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+/* 정책 링크 */
+.policy-links {
+    position: relative;
+    z-index: 1;
+    margin-left: 149px;
+    margin-top: 42px;
+}
+
+.policy-link {
+    font-family: 'Pretendard Variable';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.policy-link:hover {
+    color: #DB4827;
+}
+
+/* 소셜 링크 컨테이너 */
+.social-links {
+    position: relative;
+    z-index: 1;
+    margin-left: 149px;
+    margin-top: 67px;
+    display: flex;
+    gap: 53px;
+}
+
+/* 소셜 링크 */
+.social-link {
+    width: 65px;
+    height: 65px;
+    background: #333333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #DB4827;
+}
+
+/* 소셜 아이콘 이미지 스타일 */
+.social-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* 아이콘을 흰색으로 만듦 */
+    transition: filter 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+    filter: brightness(0) invert(1); /* 호버 시에도 흰색 유지 */
+}

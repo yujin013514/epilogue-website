@@ -1,0 +1,206 @@
+/* ==========================================================================
+   Contact Page Specific Styles - contact.css
+   ========================================================================== */
+
+/* Contact 페이지 전용 body 스타일 */
+body {
+    background-color: #000000 !important;
+    min-height: 100vh;
+}
+
+/* Contact 페이지 메인 컨테이너 */
+.main-container {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    min-height: calc(100vh - 110px - 400px);
+    margin: 100px auto 0 auto;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 100px;
+    box-sizing: border-box;
+}
+
+/* 왼쪽 텍스트 영역 */
+.left-content {
+    position: relative;
+    width: 439px;
+    z-index: 2;
+}
+
+.main-title {
+    font-family: 'Pretendard Variable';
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 84px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    margin-bottom: 32px;
+}
+
+.main-description {
+    font-family: 'Pretendard Variable';
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+/* 오른쪽 컨택트 폼 영역 */
+.contact-form-container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-form {
+    width: 719px;
+    background: #FAFAFA;
+    border-radius: 30px;
+    padding: 58px 52px 62px 52px;
+    box-sizing: border-box;
+}
+
+/* 폼 로우 (성함, 회사명 같은 줄) */
+.form-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* 폼 그룹 */
+.form-group {
+    flex: 1;
+}
+
+.form-group.full-width {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/* 라벨 스타일 */
+.form-group label {
+    display: block;
+    font-family: 'Pretendard Variable';
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 32px;
+    letter-spacing: -0.05em;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+/* 입력 필드 스타일 */
+.form-group input {
+    width: 100%;
+    height: 52px;
+    border: 1px solid #B7B7B7;
+    border-radius: 15px;
+    padding: 0 20px;
+    font-family: 'Pretendard Variable';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #DB4827;
+    box-shadow: 0 0 0 2px rgba(219, 72, 39, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #CCCCCC;
+}
+
+/* 체크박스 영역 */
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 50px;
+    line-height: 1.4;
+}
+
+.form-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    accent-color: #DB4827;
+    cursor: pointer;
+}
+
+.form-checkbox label {
+    font-family: 'Pretendard Variable';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.05em;
+    color: #000000;
+    cursor: pointer;
+    flex: 1;
+}
+
+/* 제출 버튼 */
+.submit-btn {
+    width: 614px;
+    height: 77px;
+    background: #DB4827;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Pretendard Variable';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn:hover {
+    background: #c43e21;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(219, 72, 39, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* 폼 검증 스타일 */
+.form-group input.error {
+    border-color: #ff4444;
+    background-color: #fff5f5;
+}
+
+.form-group input.success {
+    border-color: #4CAF50;
+    background-color: #f8fff8;
+}
+
+/* 제출 중 상태 */
+.submit-btn:disabled {
+    background: #CCCCCC;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.submit-btn.loading::after {
+    content: "...";
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: ""; }
+    40% { content: "."; }
+    60% { content: ".."; }
+    80%, 100% { content: "..."; }
+}
