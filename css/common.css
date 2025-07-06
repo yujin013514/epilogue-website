@@ -36,7 +36,7 @@ header {
 .logo,
 .logo a {
     font-weight: 800;
-    font-size: 20px;
+    font-size: 36px;
     line-height: 48px;
     letter-spacing: -0.05em;
     color: #ffffff;
@@ -329,8 +329,9 @@ footer {
     margin-bottom: 12px;
 }
 
-/* 정책 링크 */
+/* 정책 링크 - 숨김 */
 .policy-links {
+    display: none; /* 정책 링크 숨기기 */
     position: relative;
     z-index: 1;
     margin-left: 149px;
@@ -354,12 +355,12 @@ footer {
     color: #DB4827;
 }
 
-/* 소셜 링크 컨테이너 */
+/* 소셜 링크 컨테이너 - 위치 조정 */
 .social-links {
     position: relative;
     z-index: 1;
     margin-left: 149px;
-    margin-top: 67px;
+    margin-top: 40px; /* 20px → 40px로 변경 (더 아래로) */
     display: flex;
     gap: 53px;
 }

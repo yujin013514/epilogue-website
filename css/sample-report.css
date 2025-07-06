@@ -27,49 +27,6 @@ body {
     width: 1440px; /* 컨테이너만 1440px로 제한 */
 }
 
-/* 헤더 스타일 - services와 동일하게 */
-header {
-    height: 110px;
-    background-color: #000000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    position: relative;
-    width: 100%;
-    z-index: 1000;
-}
-
-.logo {
-    font-family: 'Pretendard Variable';
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: -0.05em;
-    color: #FFFFFF;
-}
-
-nav {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-
-nav a {
-    font-family: 'Pretendard Variable';
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 28px;
-    letter-spacing: -0.05em;
-    color: #FFFFFF;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #DB4827;
-}
-
 /* Hero 섹션 - 패딩 줄임 */
 .hero-section {
     position: relative;

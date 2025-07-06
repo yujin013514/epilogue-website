@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="footer-line"></div>
             <div class="footer-content">
                 <div class="company-info">
-                    <div class="company-name">주식회사 에필로그</div>
-                    <div class="company-details">대표자: 강서현, 설유진, 이수나, 장하리, 조은비, 한수예</div>
+                    <div class="company-name">에필로그</div>
+                    <div class="company-details">대표자: 강서현, 심유진, 이수나, 장하리, 조은비, 한수예</div>
                     <div class="company-details">이메일: epilogue.global@gmail.com</div>
                     <div class="company-details">주소: 57 St Joseph St, Toronto, Ontario, M5S 0C5</div>
                 </div>
@@ -31,15 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     <a href="#" class="policy-link">서비스이용약관</a>
                 </div>
                 <div class="social-links">
-                    <div class="social-link">
+                    <a href="mailto:epilogue.global@gmail.com" class="social-link">
                         <img src="images/footer/imageMail.png" alt="메일" class="social-icon">
-                    </div>
-                    <div class="social-link">
+                    </a>
+                    <a href="https://www.instagram.com/epilogueglobal/" target="_blank" class="social-link">
                         <img src="images/footer/imageInsta.png" alt="인스타그램" class="social-icon">
-                    </div>
-                    <div class="social-link">
+                    </a>
+                    <a href="https://www.linkedin.com/company/epiloguetoglobal" target="_blank" class="social-link">
                         <img src="images/footer/imageLinkedin.png" alt="링크드인" class="social-icon">
-                    </div>
+                    </a>
                 </div>
                 <div class="copyright">Copyright © 2025 Epilogue. All rights reserved.</div>
             </div>
@@ -84,13 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 푸터 이벤트 초기화
     function initializeFooterEvents() {
-        const socialLinks = document.querySelectorAll('.social-link');
-        socialLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                alert('소셜 미디어 페이지로 이동합니다.');
-            });
-        });
+        // 소셜 링크는 이제 직접 연결되므로 별도 처리 불필요
     }
 
     // 이메일 폼 처리 (공통)
