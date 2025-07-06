@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="company-info">
                     <div class="company-name">에필로그</div>
                     <div class="company-details">대표자: 강서현, 심유진, 이수나, 장하리, 조은비, 한수예</div>
-                    <div class="company-details">이메일: epilogue.global@gmail.com</div>
+                    <div class="company-details">이메일: sales@epiloguehq.com</div>
                     <div class="company-details">주소: 57 St Joseph St, Toronto, Ontario, M5S 0C5</div>
                 </div>
                 <div class="policy-links">
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <a href="#" class="policy-link">서비스이용약관</a>
                 </div>
                 <div class="social-links">
-                    <a href="mailto:epilogue.global@gmail.com" class="social-link">
+                    <a href="mailto:sales@epiloguehq.com" class="social-link">
                         <img src="images/footer/imageMail.png" alt="메일" class="social-icon">
                     </a>
                     <a href="https://www.instagram.com/epilogueglobal/" target="_blank" class="social-link">
