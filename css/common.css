@@ -36,7 +36,7 @@ header {
 .logo,
 .logo a {
     font-weight: 800;
-    font-size: 40px;
+    font-size: 20px;
     line-height: 48px;
     letter-spacing: -0.05em;
     color: #ffffff;
@@ -53,7 +53,7 @@ nav {
 .nav-item,
 nav a {
     font-weight: 600;
-    font-size: 22px;  /* 26px → 22px로 줄임 */
+    font-size: 20px; 
     line-height: 28px;  /* line-height도 비례적으로 줄임 */
     letter-spacing: -0.05em;
     color: #ffffff;
