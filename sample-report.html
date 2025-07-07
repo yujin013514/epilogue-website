@@ -25,7 +25,7 @@
                 
                 <!-- CTA 섹션 -->
                 <div class="hero-cta">
-                    <a href="#" class="hero-cta-button">전문가와 상담하기</a>
+                    <a href="contact.html" class="hero-cta-button">전문가와 상담하기</a>
                     <form class="hero-email-form" action="https://formspree.io/f/movwzdgn" method="POST">
                         <input type="email" class="hero-email-input" name="email" placeholder="회사 이메일을 입력해주세요" required>
                         <button type="submit" class="hero-email-submit">제출</button>
@@ -197,16 +197,13 @@
                 });
             }
 
-            // CTA 버튼 클릭 처리
-            const ctaButtons = document.querySelectorAll('.hero-cta-button, .final-cta-button');
-            ctaButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    if (this.tagName === 'BUTTON') {
-                        e.preventDefault();
-                    }
-                    alert('데모 신청 페이지로 이동합니다.');
+            // 데모 신청 버튼 클릭 처리
+            const finalCtaButton = document.querySelector('.final-cta-button');
+            if (finalCtaButton) {
+                finalCtaButton.addEventListener('click', function() {
+                    window.location.href = 'contact.html';
                 });
-            });
+            }
         });
     </script>
 </body>

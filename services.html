@@ -23,7 +23,7 @@
             
             <!-- CTA 섹션 -->
             <div class="cta-section">
-                <a href="#" class="cta-button">전문가와 상담하기</a>
+                <a href="contact.html" class="cta-button">전문가와 상담하기</a>
                 <form class="email-form" action="https://formspree.io/f/movwzdgn" method="POST">
                     <input type="email" class="email-input" name="email" placeholder="회사 이메일을 입력해주세요" required>
                     <button type="submit" class="email-submit-btn">제출</button>
@@ -194,6 +194,14 @@
                 setInterval(() => {
                     nextBtn.click();
                 }, 4000); // 4초마다 자동 슬라이드
+            }
+
+            // 데모 신청 버튼 클릭 처리
+            const demoButton = document.querySelector('.demo-button');
+            if (demoButton) {
+                demoButton.addEventListener('click', function() {
+                    window.location.href = 'contact.html';
+                });
             }
         });
     </script>
